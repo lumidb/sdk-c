@@ -63,7 +63,7 @@ int main(int argc, char* argv[]) {
             goto cleanup;
         }
 
-        printf("asset %d: %s\n", i + 1, asset_id);
+        printf("asset %d/%d: %s\n", i + 1, num_files, asset_id);
         assets[i].asset_id = asset_id;
         assets[i].proj = table_proj;
     }
