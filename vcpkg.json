@@ -1,0 +1,9 @@
+{
+  "name": "lumilapio",
+  "version": "0.0.1",
+  "description": "C SDK for LumiDB",
+  "dependencies": [
+    "curl",
+    "cjson"
+  ]
+}
