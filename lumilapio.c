@@ -86,12 +86,12 @@ int main(int argc, char* argv[]) {
 
     int done = 0;
     while (!done) {
+        sleep(5);
         err = lumidb_poll_import_status(lumidb, table_id, &done);
         if (err) {
             printf("LumiDB Error: %d %s\n", err, lumidb_error_string(err));
             goto cleanup;
         }
-        sleep(5);
     }
 
     ret = 0;
