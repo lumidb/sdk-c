@@ -1,14 +1,14 @@
-if not exist "dist" mkdir dist
+if not exist "build" mkdir build
 
-cl.exe upload.c ^
+cl.exe lumilapio.c ^
     /I"vcpkg_installed\x64-windows\include" ^
-    /Fe"dist\upload.exe" ^
-    /Fo"dist\upload.obj" ^
+    /Fe"build\lumilapio.exe" ^
+    /Fo"build\lumilapio.obj" ^
     /link ^
     /LIBPATH:"vcpkg_installed\x64-windows\lib" ^
     libcurl.lib cjson.lib ^
     || exit /b
 
 for %%f in (libcurl.dll cjson.dll zlib1.dll) do (
-    if not exist dist\%%f copy vcpkg_installed\x64-windows\bin\%%f dist
+    if not exist build\%%f copy vcpkg_installed\x64-windows\bin\%%f build
 )

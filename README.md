@@ -17,7 +17,7 @@ A header-only library for interacting with LumiDB.
 - **`lumidb_error_string(error)`**
     - Convert error code to human-readable string.
 
-The repository also contains an example program (`upload.c`) that uploads assets, starts an import, and polls for import progress.
+The repository also contains an example program (`lumilapio.c`) that uploads assets, starts an import, and polls for import progress.
 
 ## Building
 
@@ -73,5 +73,5 @@ For authentication, you need to have your API key set in the environment variabl
     #   lumilapio <lumidb_url> <table_name> <table_proj> <file1> [file2] ...
 
     # for example
-    ./dist/lumilapio https://api.lumidb.com new_york_2024 EPSG:3857 ./path/to/scan1.laz ./path/to/scan2.e57
+    ./build/lumilapio https://api.lumidb.com new_york_2024 EPSG:3857 ./path/to/scan1.laz ./path/to/scan2.e57
 ```
